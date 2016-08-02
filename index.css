@@ -1,0 +1,430 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #F2F2F2;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .container {
+    width: 80%;
+  }
+}
+
+.row {
+  position: relative;
+}
+
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+  line-height: 0;
+  height: 0;
+}
+
+.col {
+  position: relative;
+  float: left;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 3000px) {
+  .col.l1 {
+    width: 8.33333%;
+  }
+  .col.l2 {
+    width: 16.66667%;
+  }
+  .col.l3 {
+    width: 25%;
+  }
+  .col.l4 {
+    width: 33.33333%;
+  }
+  .col.l5 {
+    width: 41.66667%;
+  }
+  .col.l6 {
+    width: 50%;
+  }
+  .col.l7 {
+    width: 58.33333%;
+  }
+  .col.l8 {
+    width: 66.66667%;
+  }
+  .col.l9 {
+    width: 75%;
+  }
+  .col.l10 {
+    width: 83.33333%;
+  }
+  .col.l11 {
+    width: 91.66667%;
+  }
+  .col.l12 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .col.m1 {
+    width: 8.33333%;
+  }
+  .col.m2 {
+    width: 16.66667%;
+  }
+  .col.m3 {
+    width: 25%;
+  }
+  .col.m4 {
+    width: 33.33333%;
+  }
+  .col.m5 {
+    width: 41.66667%;
+  }
+  .col.m6 {
+    width: 50%;
+  }
+  .col.m7 {
+    width: 58.33333%;
+  }
+  .col.m8 {
+    width: 66.66667%;
+  }
+  .col.m9 {
+    width: 75%;
+  }
+  .col.m10 {
+    width: 83.33333%;
+  }
+  .col.m11 {
+    width: 91.66667%;
+  }
+  .col.m12 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .col.s1 {
+    width: 8.33333%;
+  }
+  .col.s2 {
+    width: 16.66667%;
+  }
+  .col.s3 {
+    width: 25%;
+  }
+  .col.s4 {
+    width: 33.33333%;
+  }
+  .col.s5 {
+    width: 41.66667%;
+  }
+  .col.s6 {
+    width: 50%;
+  }
+  .col.s7 {
+    width: 58.33333%;
+  }
+  .col.s8 {
+    width: 66.66667%;
+  }
+  .col.s9 {
+    width: 75%;
+  }
+  .col.s10 {
+    width: 83.33333%;
+  }
+  .col.s11 {
+    width: 91.66667%;
+  }
+  .col.s12 {
+    width: 100%;
+  }
+}
+
+.banner {
+  position: relative;
+  width: auto;
+  height: 400px;
+  background: url(img/banner.jpg) center center;
+  background-size: cover;
+}
+
+.banner .bootstrap {
+  top: 138px;
+  height: 190px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.banner .bootstrap .boot {
+  width: 100%;
+  height: 70px;
+}
+
+.banner .bootstrap .boot h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 64px;
+  font-family: Arial;
+}
+
+.banner .bootstrap .boot h1 a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.banner .bootstrap .boot h1 a:hover {
+  text-decoration: underline;
+}
+
+.banner .bootstrap .you {
+  width: 100%;
+  height: 120px;
+  line-height: 120px;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 34px;
+}
+
+.banner .bootstrap .you img {
+  width: 78px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -105px;
+  cursor: pointer;
+}
+
+.a {
+  margin-top: 60px;
+}
+
+.box {
+  padding: 15px;
+  margin: 0 auto;
+  width: 95%;
+  background: #fff;
+  padding-bottom: 50px;
+  cursor: pointer;
+}
+
+.box img {
+  width: 100%;
+}
+
+.box h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 12px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300px;
+}
+
+.box h2 a {
+  color: #777;
+  text-decoration: none;
+}
+
+.box h2 a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.page {
+  width: 100%;
+  height: 40px;
+  margin: 30px 0;
+  color: #666666;
+  text-align: center;
+  font-size: 13px;
+  line-height: 40px;
+}
+
+.page span {
+  width: 100%;
+  margin-left: 10%;
+}
+
+.page a {
+  width: 80px;
+  border: 1px solid #39414a;
+  color: #39414a;
+  background: #F2F2F2;
+  border-radius: 3px;
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 30px;
+}
+
+.page a:hover {
+  background: #4A4849;
+  color: #FFFFFF;
+}
+
+/*container部分结束*/
+/*文字部分开始*/
+.wenzi {
+  width: 100%;
+  height: 150px;
+  background: #EEEEEE;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.wenzi p {
+  margin: 18px 0;
+}
+
+.wenzi p a {
+  color: #677ABC;
+}
+
+.wenzi p a:hover {
+  color: #5C527C;
+  text-decoration: underline;
+}
+
+/*文字部分结束*/
+/*foot部分开始*/
+.footbox {
+  background: #202020;
+  width: auto;
+  border-bottom: 1px solid #303030;
+}
+
+.footbox .footin {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footbox .footin .foot {
+  width: 85%;
+  height: 144px;
+  margin: 30px auto;
+  border: 1px solid transparent;
+}
+
+.footbox .footin .foot h4 {
+  display: block;
+  color: #FFFFFF;
+  border-bottom: 1px solid #303030;
+  font-size: 18px;
+  line-height: 30px;
+  position: relative;
+}
+
+.footbox .footin .foot .neirong {
+  font-size: 14px;
+  border-bottom: 1px dashed #303030;
+  line-height: 50px;
+}
+
+.footbox .footin .foot .neirong a {
+  color: #959595;
+}
+
+.footbox .footin .foot .neirong a:hover {
+  color: #FFFFFF;
+}
+
+.foot h4:after {
+  content: "";
+  width: 90px;
+  height: 1px;
+  background: #337ab7;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}
+
+.foot .jishu {
+  height: 100px;
+  margin-top: 10px;
+}
+
+.foot .jishu .fangkuai {
+  height: 20px;
+  background: #202020;
+  text-align: center;
+  line-height: 20px;
+  float: left;
+  border: 1px solid #959595;
+  margin-top: 8px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.foot .jishu .fangkuai:hover {
+  background: #337AB7;
+}
+
+.foot .jishu .fangkuai:hover a {
+  color: #FFFFFF;
+}
+
+.foot .jishu .fangkuai a {
+  display: block;
+  color: #959595;
+}
+
+.endbox {
+  width: auto;
+  height: 54px;
+  background: #111111;
+  border: 1px solid transparent;
+}
+
+.endbox p {
+  width: 100%;
+  height: 18px;
+  margin-top: 18px;
+  text-align: center;
+  line-height: 18px;
+  font-size: 13px;
+  color: #555555;
+}
+
+.endbox p a {
+  color: #555555;
+}
+
+.endbox p a:hover {
+  text-decoration: underline;
+}

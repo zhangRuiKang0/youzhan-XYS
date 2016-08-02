@@ -1,0 +1,301 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing:border-box;
+}
+a{
+	text-decoration: none;
+}
+$number:12;
+$l-device:3000px;
+$m-device:1200px;
+$s-device:990px;
+$list:(
+	'l':$l-device,
+	'm':$m-device,
+	's':$s-device
+	);
+
+@mixin ons{
+	@media screen and (max-width: $s-device){
+		@content;
+	}
+}
+@mixin onm{
+	@media screen and (max-width: $m-device){
+		@content;
+	}
+}
+body{
+	background:#F2F2F2;
+}
+
+.container{
+	width:90%;
+	margin: 0 auto;
+	@include onm{
+		width: 80%;
+	}
+	@include ons{
+		width: 80%;
+	}
+}
+
+.row{
+	position: relative;
+	&::after{
+	content: '';
+	display: block;
+	clear: both;
+	line-height: 0;
+	height: 0;
+	}
+}
+
+.col{
+	position: relative;
+	float: left;
+	margin-top:30px;
+}
+
+
+@each $k in map_keys($list){
+	@media screen and (max-width: map_get($list,$k)){
+	@for $i from 1 through $number{
+	.col.#{$k}#{$i}{
+		width: percentage($i/$number);
+	 }
+    }	
+	}
+}
+@mixin c-align{
+	position: absolute;
+	
+	left: 0;
+	right: 0;
+	margin:auto;
+}
+@mixin v-align{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.banner{
+	position: relative;
+	width:auto;
+	height: 400px;
+	background: url(img/banner.jpg)center center;
+	background-size: cover;
+}
+.banner .bootstrap{
+	top: 138px;
+	height: 190px;
+	@include c-align;
+}
+.banner .bootstrap .boot{
+	width: 100%;
+	height: 70px;
+	h1{
+		text-align: center;	
+		font-weight: 700;
+  		font-size: 64px;
+  		font-family: Arial;
+  		a{
+  			text-decoration: none;
+  			color:#FFFFFF;
+  			&:hover{
+  				text-decoration:underline;
+  			}
+  		}
+	}
+}
+.banner .bootstrap .you{
+	width: 100%;
+	height: 120px;
+	line-height: 120px;
+	color: #FFFFFF;
+	text-align: center;
+  	font-weight: bold;
+  	font-size: 34px;
+  	img{
+  		width: 78px;
+  		display: block;
+  		@include c-align;
+  		bottom: -105px;
+  		cursor: pointer;
+  	}
+}
+.a{
+	margin-top:60px;
+}
+.box{
+	padding: 15px;
+	margin: 0 auto;
+	width: 95%;
+	background: #fff;	
+	padding-bottom: 50px;
+	cursor: pointer;
+	img{
+		width: 100%;
+	}
+	h2{
+	       @include c-align;
+           bottom: 12px; 		
+			text-align: center;
+			font-size: 24px;
+			font-weight: 300px;
+			a{
+    		 color: #777;
+    		text-decoration: none;
+    		&:hover{
+    			color: black;
+    			text-decoration: underline;
+    		}
+    	}
+		}
+
+}
+.page{
+	width: 100%;
+	height: 40px;
+	margin: 30px 0;
+	color:#666666;
+	text-align: center;
+	font-size: 13px;
+	line-height: 40px;
+	span{
+		width: 100%;
+		margin-left:10%;							
+	}
+}
+.page a{
+	width: 80px;
+    border: 1px solid #39414a;
+    color: #39414a;
+    background: #F2F2F2;
+    border-radius: 3px;
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 30px;
+    &:hover{
+    	background:#4A4849;
+    	color:#FFFFFF;
+    }
+}
+/*container部分结束*/
+/*文字部分开始*/
+.wenzi{
+	width: 100%;
+	height: 80px;
+	background: #EEEEEE;
+	margin-top: 20px;
+	font-size: 14px;
+	color:#333333;
+	text-align: center;	
+	padding: 30px 0;
+	p{
+		margin: 18px 0;
+		a{
+			color:#677ABC;
+			&:hover{
+				color:#5C527C;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+/*文字部分结束*/
+/*foot部分开始*/
+.footbox{
+	background: #202020;
+	width: auto;
+	border-bottom: 1px solid #303030;
+	.footin{
+		width: 90%;
+		margin: 0 auto;
+		.foot{
+			width: 85%;
+			height:144px;
+			margin: 30px auto;
+			border:1px solid rgba(0,0,0,0);
+			h4{
+				display: block;
+				color:#FFFFFF;
+				border-bottom: 1px solid #303030;
+				font-size: 18px;
+				line-height: 30px;
+				position: relative;
+			}
+			.neirong{
+				font-size: 14px;		
+				border-bottom: 1px dashed #303030;
+				line-height: 50px;
+				a{
+					color:#959595;
+					&:hover{
+						color:#FFFFFF;
+					}
+				}
+			}
+		}
+	}
+}
+.foot h4:after {
+ 	content: "";
+ 	width: 90px;
+ 	height: 1px;
+ 	background: #337ab7;
+ 	position: absolute;
+ 	left: 0;
+ 	bottom: -1px;
+}
+.foot .jishu{
+	height: 100px;
+	margin-top: 10px;
+	.fangkuai{
+		height: 20px;
+		background: #202020;		
+		text-align: center;
+		line-height: 20px;
+		float: left;
+		border:1px solid #959595;
+		margin-top: 8px;
+		margin-right: 10px;
+		cursor: pointer;
+		&:hover{
+			background: #337AB7;
+			a{
+				color:#FFFFFF;
+			}		
+		}
+		a{
+			display: block;
+			color:#959595;
+		}
+	}
+}
+.endbox{
+	width: auto;
+	height: 54px;
+	background: #111111;
+	border:1px solid rgba(0,0,0,0);
+	p{
+		width: 100%;
+		height:18px;
+		margin-top: 18px;
+		text-align: center;
+		line-height: 18px;	
+		font-size: 13px;
+		color:#555555;
+		a{
+			color: #555555;
+			&:hover{
+				text-decoration:underline;
+			}
+		}
+	}
+}
